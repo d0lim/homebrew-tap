@@ -9,7 +9,7 @@
 cask "ccswap" do
   version "0.2.0"
 
-  deprecate! date: "2026-09-02", because: "ccswap was renamed to aaswap",
+  deprecate! date: "2026-09-02", because: "was renamed to aaswap",
              replacement_cask: "d0lim/tap/aaswap"
 
   on_macos do
