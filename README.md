@@ -1,7 +1,23 @@
 # homebrew-tap
 
-Homebrew tap for [aaswap](https://github.com/d0lim/aaswap) — Agent Account
-Swap, which manages several agent CLI logins on one machine.
+Homebrew tap for d0lim's tools.
+
+## Garakuta
+
+[Garakuta](https://github.com/d0lim/garakuta) is a menu bar organizer, notch
+panel and window switcher for macOS 15 and later.
+
+```bash
+brew install --cask d0lim/tap/garakuta
+```
+
+`Casks/garakuta.rb` is written by `scripts/update-cask.sh` in the Garakuta
+repository on each release.
+
+## aaswap
+
+[aaswap](https://github.com/d0lim/aaswap) — Agent Account Swap, which manages
+several agent CLI logins on one machine.
 
 ```bash
 brew install --cask d0lim/tap/aaswap
