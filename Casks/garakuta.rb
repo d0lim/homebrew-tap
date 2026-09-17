@@ -5,7 +5,7 @@ cask "garakuta" do
 
   url "https://github.com/d0lim/garakuta/releases/download/v#{version}/Garakuta-#{version}.zip"
   name "Garakuta"
-  desc "Menu bar organizer, notch panel and window switcher for macOS"
+  desc "Menu bar organizer, notch panel and window switcher"
   homepage "https://github.com/d0lim/garakuta"
 
   livecheck do
@@ -13,16 +13,15 @@ cask "garakuta" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Garakuta.app"
 
-  postflight do
+  postflight_steps do
     # The app is ad-hoc signed, so Gatekeeper quarantines the download and refuses to open it.
     # Homebrew fetched the archive itself; clearing the flag it set is the documented way to make
     # an unsigned cask runnable.
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Garakuta.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Garakuta.app"]
   end
 
   zap trash: [
