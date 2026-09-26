@@ -11,7 +11,9 @@ brew install --cask d0lim/tap/organ
 ```
 
 앱은 `Organ.app`으로 설치되며, 데이터 복구 도구 `organ-data`도 명령줄에서 사용할 수 있습니다.
-`0.0.1-alpha2`의 앱과 `organ-data`는 Developer ID로 서명되었고 Apple 공증을 받았습니다. 공개 다운로드 설치본의 실행 검증은 아직 진행 중입니다.
+`0.0.1-alpha2`의 앱과 `organ-data`는 Developer ID로 서명되었고 Apple 공증을 받았습니다. macOS 27에서 Homebrew 업그레이드·설치, 앱 실행·저장 및 CLI 백업·복원을 확인했습니다.
+
+기존 설치는 `brew update` 후 `brew upgrade --cask d0lim/tap/organ`으로 갱신합니다.
 
 ## Garakuta
 
