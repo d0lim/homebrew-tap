@@ -4,15 +4,14 @@ Homebrew tap for d0lim's tools.
 
 ## Organ
 
-개인 워크플로우 앱 Organ의 macOS Apple Silicon 알파 버전입니다. macOS 13 이상에서 설치할 수 있습니다.
+개인 워크플로우 앱 Organ의 macOS Apple Silicon 알파 버전입니다. 현재 cask는 `0.0.1-alpha2`를 가리키며 macOS 13 이상을 지원합니다.
 
 ```bash
 brew install --cask d0lim/tap/organ
 ```
 
 앱은 `Organ.app`으로 설치되며, 데이터 복구 도구 `organ-data`도 명령줄에서 사용할 수 있습니다.
-첫 실행 시 macOS가 차단하면 시스템 설정 → 개인정보 보호 및 보안에서 앱을 허용하세요.
-이 빌드는 임시 서명되었으며 Apple 공증을 받지 않았습니다.
+`0.0.1-alpha2`의 앱과 `organ-data`는 Developer ID로 서명되었고 Apple 공증을 받았습니다. 공개 다운로드 설치본의 실행 검증은 아직 진행 중입니다.
 
 ## Garakuta
 
