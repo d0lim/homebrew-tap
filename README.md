@@ -22,14 +22,15 @@ display-remember repository. Release archives are hosted in that repository.
 
 ## Organ
 
-개인 워크플로우 앱 Organ의 macOS Apple Silicon 알파 버전입니다. 현재 cask는 `0.0.1-alpha2`를 가리키며 macOS 13 이상을 지원합니다.
+개인 워크플로우 앱 Organ의 macOS Apple Silicon 알파 버전입니다. 현재 cask는 Wails·Solid·Go 기반 `0.0.1-alpha3`를 가리키며 macOS 13 이상을 대상으로 합니다.
 
 ```bash
 brew install --cask d0lim/tap/organ
 ```
 
-앱은 `Organ.app`으로 설치되며, 데이터 복구 도구 `organ-data`도 명령줄에서 사용할 수 있습니다.
-`0.0.1-alpha2`의 앱과 `organ-data`는 Developer ID로 서명되었고 Apple 공증을 받았습니다. macOS 27에서 Homebrew 업그레이드·설치, 앱 실행·저장 및 CLI 백업·복원을 확인했습니다.
+앱과 동봉 실행 파일은 Developer ID로 서명하고 Apple 공증을 받았습니다. 기본 운영 서버는 지정된 소유자 Google 계정만 로그인할 수 있는 개인용 서버입니다.
+
+기존 alpha2 로컬 자료는 보존하며 자동 이행하지 않습니다. 동봉 `organ-data`는 alpha2 자료의 백업·내보내기·복구용이고, 새 앱의 작업 공간은 앱의 전체 백업 기능을 사용합니다. 자료 이행 방법과 실제 검증·미검증 범위는 [alpha3 릴리스 안내](https://github.com/d0lim/homebrew-tap/releases/tag/organ-v0.0.1-alpha3)를 따릅니다.
 
 기존 설치는 `brew update` 후 `brew upgrade --cask d0lim/tap/organ`으로 갱신합니다.
 
