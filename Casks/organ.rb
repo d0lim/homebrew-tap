@@ -1,6 +1,6 @@
 cask "organ" do
-  version "0.0.1-alpha5"
-  sha256 "014c7a37b459e4053fdc2891da6101a672ace8fd5e6e74d22c27d8510f839acd"
+  version "0.0.1-alpha6"
+  sha256 "5d5c01c0bdec542c167ac5e042d4005c3e4d80e620dbff9bda0ddcafef10092a"
 
   url "https://github.com/d0lim/homebrew-tap/releases/download/organ-v#{version}/Organ-#{version}-arm64.zip"
   name "Organ"
