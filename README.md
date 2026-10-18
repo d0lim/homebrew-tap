@@ -28,7 +28,7 @@ display-remember repository. Release archives are hosted in that repository.
 brew install --cask d0lim/tap/organ
 ```
 
-alpha8에는 캡처 바 · Inbox 결정 큐 · Today(목록 · 타임라인 · 제자리 편집 · 2초 머무는 완료) · "노트 남기기"가 있고, 노트 에디터는 아직 없습니다. 이전 알파(Wails·Go, alpha1~7)와는 다른 앱이고 데이터는 이어지지 않습니다. 앱은 Developer ID로 서명하고 Apple 공증을 받았습니다. 압축 파일과 체크섬은 이 저장소의 `organ-v<버전>` 릴리스에 있고, `Casks/organ.rb`는 organ 저장소의 `scripts/package-mac.sh` 결과를 손으로 옮깁니다.
+alpha9에는 캡처 바 · Inbox 결정 큐 · Today(목록 · 타임라인 · 제자리 편집 · 2초 머무는 완료) · "노트 남기기"에 더해, 캡처가 보고 있는 화면으로 바로 가고(Today → 오늘 할 일, 프로젝트 페이지 → 그 프로젝트; ⌘↵은 어디서든 Inbox) 사이드바의 영역 → 프로젝트 트리에서 각 scope의 할 일과 노트 제목을 볼 수 있습니다. 노트 에디터는 아직 없습니다. 이전 알파(Wails·Go, alpha1~7)와는 다른 앱이고 데이터는 이어지지 않습니다. 앱은 Developer ID로 서명하고 Apple 공증을 받았습니다. 압축 파일과 체크섬은 이 저장소의 `organ-v<버전>` 릴리스에 있고, `Casks/organ.rb`는 organ 저장소의 `scripts/package-mac.sh` 결과를 손으로 옮깁니다.
 
 기존 설치는 `brew update` 후 `brew upgrade --cask d0lim/tap/organ`으로 갱신합니다.
 
