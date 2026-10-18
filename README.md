@@ -22,15 +22,13 @@ display-remember repository. Release archives are hosted in that repository.
 
 ## Organ
 
-개인 워크플로우 앱 Organ의 macOS Apple Silicon 알파 버전입니다. 현재 cask는 Wails·Solid·Go 기반 `0.0.1-alpha4`를 가리키며 macOS 13 이상을 대상으로 합니다.
+[Organ](https://github.com/d0lim/organ)은 개인용 PKM + 할 일 앱입니다. `0.0.1-alpha8`부터 Swift·AppKit으로 다시 만든 트리를 배포합니다 — 서버 없이 로컬 SQLite 저널 하나에 모든 기록이 Event로 남습니다. Apple Silicon, macOS 27 이상.
 
 ```bash
 brew install --cask d0lim/tap/organ
 ```
 
-앱과 동봉 실행 파일은 Developer ID로 서명하고 Apple 공증을 받았습니다. 기본 운영 서버는 지정된 소유자 Google 계정만 로그인할 수 있는 개인용 서버입니다.
-
-미니멀한 단색 앱 아이콘을 포함합니다. 기존 alpha2 로컬 자료는 보존하며 자동 이행하지 않습니다. alpha4부터 `organ-data` 명령 제공을 종료하고 업그레이드 시 기존 명령 연결도 제거합니다. alpha2 백업·내보내기·복구 도구는 [기존 alpha3 ZIP](https://github.com/d0lim/homebrew-tap/releases/tag/organ-v0.0.1-alpha3)에서 별도로 사용할 수 있습니다. 새 작업 공간은 앱의 전체 백업 기능을 사용합니다. 자료 이행 방법과 실제 검증·미검증 범위는 [alpha4 릴리스 안내](https://github.com/d0lim/homebrew-tap/releases/tag/organ-v0.0.1-alpha4)를 따릅니다.
+alpha8에는 캡처 바 · Inbox 결정 큐 · Today(목록 · 타임라인 · 제자리 편집 · 2초 머무는 완료) · "노트 남기기"가 있고, 노트 에디터는 아직 없습니다. 이전 알파(Wails·Go, alpha1~7)와는 다른 앱이고 데이터는 이어지지 않습니다. 앱은 Developer ID로 서명하고 Apple 공증을 받았습니다. 압축 파일과 체크섬은 이 저장소의 `organ-v<버전>` 릴리스에 있고, `Casks/organ.rb`는 organ 저장소의 `scripts/package-mac.sh` 결과를 손으로 옮깁니다.
 
 기존 설치는 `brew update` 후 `brew upgrade --cask d0lim/tap/organ`으로 갱신합니다.
 
