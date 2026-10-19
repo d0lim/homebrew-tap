@@ -1,0 +1,33 @@
+name: cockpit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cockpit-cask
+  cancel-in-progress: false
+
+jobs:
+  cask:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: scripts/update-cask.sh d0lim/cockpit cockpit "Runs end-to-end flows against a compose stack"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: |
+          if git diff --quiet -- Casks/cockpit.rb && ! git ls-files --others --exclude-standard -- Casks/cockpit.rb | grep -q .; then
+            echo "cask is up to date"
+            exit 0
+          fi
+          version="$(sed -n 's/^  version "\(.*\)"$/\1/p' Casks/cockpit.rb)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Casks/cockpit.rb
+          git commit -m "chore(cockpit): release ${version}"
+          git push
