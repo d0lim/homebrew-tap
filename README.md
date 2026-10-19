@@ -33,7 +33,7 @@ Each cask is written by its tool's release process. Edit the source, not the cas
 | Cask | Written by |
 | --- | --- |
 | `aaswap` | GoReleaser in the aaswap release |
-| `cockpit` | GoReleaser in the cockpit release |
+| `cockpit` | `.github/workflows/cockpit.yaml` here, from the latest cockpit release |
 | `display-remember` | `scripts/update-cask.sh` in display-remember |
 | `garakuta` | `scripts/update-cask.sh` in garakuta |
 | `organ` | copied from the output of `scripts/package-mac.sh` in organ; archives are attached to this repository's `organ-v<version>` releases |
