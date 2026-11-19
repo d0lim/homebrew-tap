@@ -1,23 +1,23 @@
 cask "cockpit" do
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     on_arm do
-      sha256 "2bd1f328b911ca011d534aebfdc2c2338f97b1903f08503e128019346856f5f8"
+      sha256 "c71b2cba287e734939bb8b46bc460e0cda86032c76079f829d92e7c3f638c158"
       url "https://github.com/d0lim/cockpit/releases/download/v#{version}/cockpit_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e3f7d869f7bb261515e11af95e74bd7a8916213f8ba4c1b408859293f5f833a7"
+      sha256 "c37de71582fd16465865ed2fdae0ee6f9f804df322a48c39d12824d70bf7aaf5"
       url "https://github.com/d0lim/cockpit/releases/download/v#{version}/cockpit_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "c9648ad781a84a7e18c9c0ba1c846f057af386e2407a45fbc90457d202ee8df7"
+      sha256 "5201c99550099adb64f8977baa9443fd04bcfaec65ca2665f1c2dfe53a46cc6c"
       url "https://github.com/d0lim/cockpit/releases/download/v#{version}/cockpit_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d530bd0d739bc7bd3dd28256d865257c1297802baf3c67f0cdf53775138ae29e"
+      sha256 "1d1ce64902098b27c3e62df7624e76c1d6845d4776a7d8b6c2b44bb4f32f39e6"
       url "https://github.com/d0lim/cockpit/releases/download/v#{version}/cockpit_#{version}_linux_amd64.tar.gz"
     end
   end
